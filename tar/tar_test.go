@@ -1,7 +1,7 @@
 package tar
 
 import (
-"testing"
+	"testing"
 )
 
 func TestPractice(t *testing.T) {
