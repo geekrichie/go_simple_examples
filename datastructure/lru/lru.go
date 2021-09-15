@@ -33,7 +33,6 @@ func (l *lru)Get(key string)(*list.Element, error) {
 func (l *lru)Set(key string, value interface{}) {
 	    l.list.PushFront(value)
 		l.warehouse[key] = l.list.Front()
-		//todo 删除过期元素
 		for l.list.Len() > l.capacity {
 			l.list.Remove(l.list.Back())
 		}
